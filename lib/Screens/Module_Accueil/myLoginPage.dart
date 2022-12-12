@@ -134,30 +134,25 @@ class MyLoginPageState extends State<MyLoginPage> {
                                         Column(
                                             crossAxisAlignment: CrossAxisAlignment.stretch,
                                             children: [
-                                              RaisedButton(
-                                                shape: RoundedRectangleBorder(
-                                                    borderRadius: BorderRadius.circular(10.0)
+                                              ElevatedButton(
+                                                style: ElevatedButton.styleFrom(
+                                                  // foregroundColor: Theme.of(context).primaryColor,
+                                                  // backgroundColor: Theme.of(context).backgroundColor,
+                                                  minimumSize: Size(0, 50),
                                                 ),
-                                                color: Theme.of(context).primaryColor,
-                                                elevation: 0,
-                                                padding: const EdgeInsets.symmetric(
-                                                  vertical: 15.0,
-                                                ),
-                                                onPressed: () => {
+                                                onPressed: () {
                                                   if(_formKey.currentState!.validate()) {
                                                     Navigator.push(
-                                                        context,
-                                                        MaterialPageRoute(
+                                                      context,
+                                                      MaterialPageRoute(
                                                           builder: (context) => const MyHomePage(),
-                                                        )
-                                                    ),
+                                                      )
+                                                    );
                                                   }
                                                 },
                                                 child: Text(
-                                                  'Connexion',
-                                                  style: TextStyle(
-                                                    color: Theme.of(context).splashColor,
-                                                  ),
+                                                  "Se connecter",
+                                                  style: TextStyle(fontSize: 20),
                                                 ),
                                               ),
                                             ]
