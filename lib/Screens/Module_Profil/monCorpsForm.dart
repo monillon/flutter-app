@@ -107,9 +107,36 @@ class _MonCorpsFormState extends State<MonCorpsForm> {
               const SizedBox(
                 height: 15.0,
               ),
+              ElevatedButton(
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0)
+                      )
+                  ),
+                ),
+                child: Text(
+                  'sauvegarder'.toUpperCase(),
+                  style: TextStyle(
+                    color: Theme.of(context).splashColor,
+                  ),
+                ),
+                onPressed: () => {
+                  if(_formKey.currentState!.validate()) {
+                    // TODO: Faire changer les valeurs dans profil
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const MonProfile(),
+                        )
+                    ),
+                  }
+                },
+              )
 
               /////////////////////////////////////////////
               // Bouton sauvegarder ///////////////////////
+/*
               RaisedButton(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0)
@@ -136,6 +163,7 @@ class _MonCorpsFormState extends State<MonCorpsForm> {
                   ),
                 ),
               ),
+*/
             ],
           ),
         ),
