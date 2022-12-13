@@ -18,26 +18,30 @@ class _MonBoutonDeFormulaireState extends State<MonBoutonDeFormulaire> {
   @override
   Widget build(BuildContext context) {
     return
-      RaisedButton(
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0)
-        ),
-        color: Theme.of(context).primaryColor,
-        elevation: 0,
-        padding: const EdgeInsets.symmetric(
-          vertical: 15.0,
-        ),
-        onPressed: () => {
-          if(widget.maFormState!.validate()) {
-            // TODO changer de page ??
-          }
-        },
-        child: Text(
-          widget.monLabel.toUpperCase(),
-          style: TextStyle(
-            color: Theme.of(context).splashColor,
+        ElevatedButton(
+            style: ButtonStyle(
+                padding: MaterialStateProperty.all<EdgeInsets>(
+                    EdgeInsets.all(0.0)
+                ),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)
+                    )
+                )
+            ),
+
+            onPressed: () => {
+              if(widget.maFormState!.validate()) {
+                // TODO changer de page ??
+              }
+            },
+
+            child: Text(
+              widget.monLabel.toUpperCase(),
+                style: TextStyle(
+                color: Theme.of(context).splashColor,
+              ),
           ),
-        ),
-      );
+        );
   }
 }
