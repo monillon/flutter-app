@@ -471,6 +471,51 @@ class _MonProfileState extends State<MonProfile> {
                                   ),
                                   width: 115.0,
                                   height: 40.0,
+                                  child:
+                                    ElevatedButton(
+                                      style: ButtonStyle(
+                                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                            RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(10.0)
+                                            )
+                                        ),
+                                        backgroundColor: MaterialStateProperty.all<Color>(
+                                            Theme.of(context).primaryColorLight
+                                        ),
+                                      ),
+
+                                      onPressed: () => Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => MonCorpsForm(
+                                            taille: _taille,
+                                            poids: _poids,
+                                          ),
+                                        ),
+                                      ),
+
+                                      child: Row(
+                                          children: [
+                                            InkWell(
+                                              child: Icon(
+                                                  Icons.create_rounded,
+                                                  color: Theme.of(context).primaryColor
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                              width: 5.0,
+                                            ),
+                                            Text(
+                                              'Modifier',
+                                              style: TextStyle(
+                                                color: Theme.of(context).primaryColor,
+                                              ),
+                                            ),
+                                          ]
+                                      ),
+                                    )
+
+/*
                                   child: RaisedButton(
                                     shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10.0)
@@ -502,6 +547,7 @@ class _MonProfileState extends State<MonProfile> {
                                         ]
                                     ),
                                   ),
+*/
                                 ),
 
                                 const SizedBox(
