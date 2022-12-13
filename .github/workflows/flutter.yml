@@ -75,10 +75,10 @@ jobs:
           channel: 'stable'
       - run: flutter pub get
       - run: flutter build ios --release --no-codesign
+      - run: ls /Users/runner/work/
       - run: ls /Users/runner/work/flutter-test-1/flutter-test-1/build/ios/iphoneos/
       - run: ls /Users/runner/work/flutter-test-1/flutter-test-1/build/ios/
       - run: ls /Users/runner/work/flutter-test-1/flutter-test-1/build/
-      - run: ls /Users/runner/work/
 #       - uses: actions/upload-artifact@v3
 #         with:
 #           name: my-app-ios-app
