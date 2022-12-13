@@ -592,6 +592,7 @@ class _MonProfileState extends State<MonProfile> {
                                   ),
                                   width: 115.0,
                                   height: 40.0,
+/*
                                   child: RaisedButton(
                                     shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10.0)
@@ -622,6 +623,7 @@ class _MonProfileState extends State<MonProfile> {
                                         ]
                                     ),
                                   ),
+*/
                                 ),
 
                                 const SizedBox(

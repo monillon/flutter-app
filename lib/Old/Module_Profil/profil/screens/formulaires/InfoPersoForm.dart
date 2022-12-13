@@ -394,6 +394,7 @@ class _InfoPersoFormState extends State<InfoPersoForm> {
 
               /////////////////////////////////////////////
               // Bouton sauvegarder ///////////////////////
+/*
               RaisedButton(
                 color: Theme.of(context).primaryColor,
                 elevation: 0,
@@ -414,6 +415,7 @@ class _InfoPersoFormState extends State<InfoPersoForm> {
                   ),
                 ),
               ),
+*/
             ],
           ),
         ),
