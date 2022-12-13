@@ -11,7 +11,7 @@ import 'monCorpsForm.dart';
 
 class MonProfile extends StatefulWidget {
 
-  const MonProfile({Key? key}) : super(key: key);
+  const MonProfile({Key? key, }) : super(key: key);
 
   @override
   State<MonProfile> createState() => _MonProfileState();
