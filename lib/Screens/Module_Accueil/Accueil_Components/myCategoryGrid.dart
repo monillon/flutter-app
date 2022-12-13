@@ -26,12 +26,17 @@ class _MyCategoryGridState extends State<MyCategoryGrid> {
   List<Widget> getChildren(BuildContext context) {
     return _categories.map<Widget>((category) {
       return
-        RaisedButton(
-            color: Theme.of(context).hoverColor,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0)
+          ElevatedButton(
+            style: ButtonStyle(
+              padding: MaterialStateProperty.all<EdgeInsets>(
+                EdgeInsets.all(0.0)
+              ),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0)
+                )
+              )
             ),
-            padding: const EdgeInsets.all(0.0),
             child: Stack(
               children:[
                 Container(
@@ -100,7 +105,7 @@ class _MyCategoryGridState extends State<MyCategoryGrid> {
                       context: context,
                       builder: (BuildContext _) {
                         return const AlertDialog(
-                          title: Text('🔨 Information 🔨'),
+                          title: Text('🔨 Information 🔨', textAlign: TextAlign.center),
                           content: Text(
                               'Faire un lien vers la page de Ma progression (à construire)'
                           ),
@@ -126,7 +131,7 @@ class _MyCategoryGridState extends State<MyCategoryGrid> {
                         context: context,
                         builder: (BuildContext _) {
                           return const AlertDialog(
-                            title: Text('🔨 Information 🔨'),
+                            title: Text('🔨 Information 🔨', textAlign: TextAlign.center),
                             content: Text(
                                 'Faire un lien vers la page de Mon programme (à construire)'
                             ),
@@ -146,8 +151,8 @@ class _MyCategoryGridState extends State<MyCategoryGrid> {
                         ),
                       ),
                     }
-            }
-        );
+            },
+          );
     }).toList();
   }
 
