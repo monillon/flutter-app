@@ -82,7 +82,7 @@ class MyLoginPageState extends State<MyLoginPage> {
                                         TextFormField(
                                           validator: (value) => validateUsername(value),
                                           decoration: InputDecoration(
-                                            hintText: 'Ton super nom',
+                                            hintText: 'Identifiant...',
                                             contentPadding: const EdgeInsets.symmetric(
                                                 horizontal: 10.0
                                             ),
