@@ -215,6 +215,7 @@ class MyLoginPageState extends State<MyLoginPage> {
       );
   }
 
+
   // ------------------------------------------------------------------------ //
   // Fonction pour contraindre l'id ----------------------------------------- //
   dynamic validateUsername(var value) {
@@ -224,6 +225,7 @@ class MyLoginPageState extends State<MyLoginPage> {
     loggedUsername = value;
     return null;
   }
+
 
   // ------------------------------------------------------------------------ //
   // Fonction pour contraindre le mdp --------------------------------------- //
@@ -237,6 +239,7 @@ class MyLoginPageState extends State<MyLoginPage> {
     }
     return null;
   }
+
 
   // ------------------------------------------------------------------------ //
   // Fonction pour vérifier au moins 1 majuscule dans le mdp ---------------- //
