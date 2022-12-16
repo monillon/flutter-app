@@ -80,6 +80,26 @@ jobs:
           name: my-app-ios-app
           path: /Users/runner/work/flutter-app/flutter-app/build/ios/iphoneos/Runner.app
           retention-days: 7
-      
-      
+
+
+  flutter_build_web:
+    name: Build for web
+    runs-on: ubuntu-latest
+    needs: flutter_test
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.3.9'
+          channel: 'stable'
+      - run: flutter pub get
+      - run: flutter build web
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-app-web
+          path: build/web/
+          retention-days: 7
+
+
       
